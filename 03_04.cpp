@@ -22,10 +22,10 @@ int main(int argc, char** argv)
 	cin >> n >> m;
 	read_image(img, n, m);
 	
-	for (unsigned int j = 0; j < m; ++j) 
+	for (unsigned int j = m - 1; j >= 0; --j) 
 	{
 		for (unsigned int i = 0; i < n; ++i)
-			cout << img[i][j] << ' ';
+			cout << img[i][j];
 		cout << endl;
 	}
 	
