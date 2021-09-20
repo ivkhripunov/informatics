@@ -4,15 +4,20 @@ using namespace std;
 
 int main()
 {
-	int n;
-	cin >> n;
-	int const size = n;
-	int array[size];
+	double size;
+	int sum = 0;
+	int tmp;
+	cin >> size;
+	int array[1000];
 	
-	for (int i = 0; i < size; ++i) 
-		cin >> array[i];
-		
-	for (int i = size - 1; i >= 0; --i)
-		cout << array[i] << ' ';
-		
+	for (int i = 0; i < size; ++i) {
+		cin >> tmp;
+		array[i] = tmp;
+		sum += array[i];
+	}
+	double average = sum / size;		
+	for (int i = 0; i < size; ++i) {
+		if (array[i] > average)
+			cout << array[i] << ' ';
+	}
 }
